@@ -1,0 +1,72 @@
+package ris.portable.model.dto;
+
+import org.apache.commons.lang.math.NumberUtils;
+
+
+public class SystemDto extends BaseDto {
+
+	private String sysdate;
+	private int kanjaidlen = 10;
+	private int renrakumemolen = 250;
+	private boolean use_mpps = true;
+	private boolean use_portable_kbn = false;
+	// 2019.06.06 Add H.Watanabe@COSMO Start 熊本大学PortableRIS改造対応
+	private boolean use_receipt_mwm = false;
+	// 2019.06.06 Add H.Watanabe@COSMO End   熊本大学PortableRIS改造対応
+
+	public String getSysdate() {
+		return sysdate;
+	}
+
+	public void setSysdate(String sysdate) {
+		this.sysdate = sysdate;
+	}
+
+	public int getKanjaidlen() {
+		return kanjaidlen;
+	}
+
+	public void setKanjaidlen(String kanjaidlen) {
+
+		if (NumberUtils.isNumber(kanjaidlen)) {
+			this.kanjaidlen = Integer.parseInt(kanjaidlen);
+		}
+	}
+
+	public int getRenrakumemolen() {
+		return renrakumemolen;
+	}
+
+	public void setRenrakumemolen(String renrakumemolen) {
+
+		if (NumberUtils.isNumber(renrakumemolen)) {
+			this.renrakumemolen = Integer.parseInt(renrakumemolen) / 2;
+		}
+	}
+
+	public boolean getUse_mpps() {
+		return this.use_mpps;
+	}
+
+	public void setUse_mpps(boolean value) {
+		this.use_mpps = value;
+	}
+
+	public boolean getUse_portable_kbn() {
+		return this.use_portable_kbn;
+	}
+
+	public void setUse_portable_kbn(boolean value) {
+		this.use_portable_kbn = value;
+	}
+
+	// 2019.06.06 Add H.Watanabe@COSMO Start 熊本大学PortableRIS改造対応
+	public boolean getUse_receipt_mwm() {
+		return this.use_receipt_mwm;
+	}
+
+	public void setUse_receipt_mwm(boolean value) {
+		this.use_receipt_mwm = value;
+	}
+	// 2019.06.06 Add H.Watanabe@COSMO End   熊本大学PortableRIS改造対応
+}

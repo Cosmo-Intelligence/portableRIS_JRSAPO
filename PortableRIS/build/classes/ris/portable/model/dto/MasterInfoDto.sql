@@ -1,0 +1,85 @@
+// 受付者情報
+select
+	m.USERID,
+	m.USERNAME
+from
+	USERMANAGE m,
+	USERINFO_CA i
+where
+	i.LOGINID = m.USERID
+and
+	i.SYOKUIN_KBN in ('設定ファイル値')
+order by
+	i.SHOWORDER asc
+
+
+// 病棟情報
+select
+	BYOUTOU_ID,
+	BYOUTOU_NAME
+from
+	BYOUTOUMASTER
+where
+	USEFLAG = '1'
+order by
+	SHOWORDER asc
+
+
+// 検査種別情報
+select
+	KENSATYPE_ID,
+	KENSATYPE_NAME
+from
+	KENSATYPEMASTER
+where
+	KENSATYPE_ID in ('設定ファイル値')
+and
+	USEFLAG = '1'
+order by
+	SHOWORDER asc
+
+
+// 検査機器情報
+select
+	KENSAKIKI_ID,
+	KENSAKIKI_NAME
+from
+	KENSAKIKIMASTER
+where
+	KENSAKIKI_ID in ('設定ファイル値')
+and
+	USEFLAG = '1'
+order by
+	SHOWORDER asc
+
+
+// 連絡メモテンプレート情報
+select
+	TEMPLATECONTENTS.TEMPLATEID,
+	TEMPLATECONTENTS.CONTENTS
+from
+	TEMPLATECONTENTS,
+	TEMPLATEGROUPMASTER
+where
+	TEMPLATECONTENTS.GROUPCODE = TEMPLATEGROUPMASTER.GROUPCODE
+and
+	TEMPLATEGROUPMASTER.GROUPCODE in ('設定ファイル値')
+and
+	TEMPLATECONTENTS.USEFLAG = '1'
+order by
+	TEMPLATEGROUPMASTER.GROUPCODE asc,
+	TEMPLATECONTENTS.TEMPLATEID asc;
+
+
+// 検査ステータス情報
+select
+	STATUSCODE,
+	SHORTLABEL,
+	COLOR,
+	COLORBK
+from
+	STATUSDEFINE
+where
+	STATUSCODE in ('設定ファイル値')
+order by
+	SHOWORDER asc

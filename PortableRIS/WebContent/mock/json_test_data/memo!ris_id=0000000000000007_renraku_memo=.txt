@@ -1,0 +1,5 @@
+{
+  "result": "NG",
+  "errlevel": "WARN",
+  "msg": "連絡メモが更新できませんでした。"
+}

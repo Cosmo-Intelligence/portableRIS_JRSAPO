@@ -1,0 +1,9 @@
+select
+	USERID,
+	USERNAME
+from
+	USERMANAGE
+where
+	USERID = :USERID
+and
+	PASSWORD = MD5_DIGEST(:PASSWORD)
