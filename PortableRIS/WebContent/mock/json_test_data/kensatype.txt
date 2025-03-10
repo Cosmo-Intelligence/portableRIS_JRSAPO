@@ -1,7 +1,0 @@
-{
-  "result": "OK",
-  "kensatype_array": [
-    {"code": "Q", "name": "病室ポータブル"},
-    {"code": "R", "name": "術中ポータブル"}
-  ]
-}

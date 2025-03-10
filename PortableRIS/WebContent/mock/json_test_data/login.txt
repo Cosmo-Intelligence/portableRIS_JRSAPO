@@ -1,5 +1,0 @@
-{
-  "result": "OK",
-  "userid": "manager",
-  "username": "管理ユーザ"
-}
