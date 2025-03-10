@@ -1,0 +1,9 @@
+{
+  "result": "NG",
+  "errlevel": "WARN",
+  "msg": "現在のステータスは最新ではありません。\n一覧の更新を行って下さい。",
+  "satuei_array": [
+  ],
+  "mpps_array": [
+  ]
+}

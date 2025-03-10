@@ -1,0 +1,10 @@
+{
+  "result": "OK",
+  "uketuke_array": [
+    {"code": "R001", "name": "労災 一郎"},
+    {"code": "R002", "name": "労災 二郎"},
+    {"code": "R003", "name": "労災 三郎"},
+    {"code": "manager", "name": "管理ユーザ"},
+    {"code": "R004", "name": "労災 四郎"}
+  ]
+}

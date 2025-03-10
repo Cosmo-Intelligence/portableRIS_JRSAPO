@@ -1,0 +1,103 @@
+{
+  "result": "OK",
+  "order_array": [
+    {
+      "ris_id": "0000000000000001",
+      "kanja_id": "00002021",
+      "status": 0,
+      "sex": "M",
+      "kanjisimei": "横河 太郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ﾀﾛｳ",
+      "byoutou": "A病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    },
+    {
+      "ris_id": "0000000000000002",
+      "kanja_id": "00002022",
+      "status": 10,
+      "sex": "F",
+      "kanjisimei": "横河 花子",
+      "kanasimei": "ﾖｺｶﾞﾜ ﾊﾅｺ",
+      "byoutou": "A病棟",
+      "byousitu": "C病室",
+      "age": "30才",
+      "irai_section": "ｙｙｙ科",
+      "irai_doctor_name": "テスト医師 1111",
+      "renraku_memo": ""
+    },
+    {
+      "ris_id": "0000000000000003",
+      "kanja_id": "00002023",
+      "status": 21,
+      "sex": "M",
+      "kanjisimei": "横河 二郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ｼﾞﾛｳ",
+      "byoutou": "B病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    },
+    {
+      "ris_id": "0000000000000004",
+      "kanja_id": "00002024",
+      "status": 90,
+      "sex": "M",
+      "kanjisimei": "横河 三郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ｻﾌﾞﾛｳ",
+      "byoutou": "B病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    },
+    {
+      "ris_id": "0000000000000005",
+      "kanja_id": "00002025",
+      "status": 20,
+      "sex": "",
+      "kanjisimei": "横河 四郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ｼﾛｳ",
+      "byoutou": "B病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    },
+    {
+      "ris_id": "0000000000000006",
+      "kanja_id": "00002026",
+      "status": 0,
+      "sex": "M",
+      "kanjisimei": "横河 五郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ｺﾞﾛｳ",
+      "byoutou": "B病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    },
+    {
+      "ris_id": "0000000000000007",
+      "kanja_id": "00002027",
+      "status": 0,
+      "sex": "M",
+      "kanjisimei": "横河 六郎",
+      "kanasimei": "ﾖｺｶﾞﾜ ﾛｸﾛｳ",
+      "byoutou": "B病棟",
+      "byousitu": "B病室",
+      "age": "29才",
+      "irai_section": "ｘｘｘ科",
+      "irai_doctor_name": "テスト医師 9999",
+      "renraku_memo": "連絡メモあり"
+    }
+  ]
+}

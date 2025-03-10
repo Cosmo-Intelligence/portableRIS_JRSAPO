@@ -1,0 +1,10 @@
+{
+  "result": "OK",
+  "status_array": [
+    {"code":  0, "name": "未受", "color":        0, "colorbk": 16777215},
+    {"code": 10, "name": "受済", "color":        0, "colorbk": 16777215},
+    {"code": 20, "name": "検中", "color":      255, "colorbk": 16777215},
+    {"code": 22, "name": "保留", "color": 12615935, "colorbk": 16777215},
+    {"code": 90, "name": "検済", "color":        0, "colorbk": 14277081}
+  ]
+}

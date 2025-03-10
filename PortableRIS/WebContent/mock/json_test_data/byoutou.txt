@@ -1,0 +1,10 @@
+{
+  "result": "OK",
+  "byoutou_array": [
+    {"code": "001", "name": "A病棟"},
+    {"code": "002", "name": "B病棟"},
+    {"code": "003", "name": "C病棟"},
+    {"code": "004", "name": "D病棟"},
+    {"code": "005", "name": "E病棟"}
+  ]
+}

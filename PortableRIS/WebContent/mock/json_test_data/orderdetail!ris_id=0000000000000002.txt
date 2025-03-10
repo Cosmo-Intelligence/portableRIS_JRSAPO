@@ -1,0 +1,24 @@
+{
+  "result": "OK",
+  "order_detail": {
+    "ris_id": "0000000000000002",
+    "kanja_id": "00002022",
+    "status": 10,
+    "sex": "F",
+    "kanjisimei": "横河 花子",
+    "kanasimei": "ﾖｺｶﾞﾜ ﾊﾅｺ",
+    "byoutou": "A病棟",
+    "byousitu": "C病室",
+    "age": "30才",
+    "irai_section": "ｙｙｙ科",
+    "irai_doctor_name": "テスト医師 1111",
+    "acno": "0000000000002",
+    "renraku_memo": "",
+    "receiptnumber": 11,
+    "receiptdate": "2015/10/01 10:30:00",
+    "irai_info": "",
+    "kanja_info": "",
+    "satueibui_info": "",
+    "kensa_date": 20150930
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "result": "NG",
+  "msg": "データベースへ接続できませんでした。",
+  "errlevel": "ERROR"
+}
