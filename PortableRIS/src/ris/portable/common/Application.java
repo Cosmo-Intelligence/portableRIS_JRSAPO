@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

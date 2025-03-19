@@ -6,11 +6,11 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.cxf.common.util.StringUtils;

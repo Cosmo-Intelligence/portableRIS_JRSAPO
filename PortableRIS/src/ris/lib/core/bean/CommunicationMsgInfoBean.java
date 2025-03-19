@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import ris.lib.core.Configuration;
 import ris.lib.core.database.RisUserSubView;

@@ -1,6 +1,6 @@
 package ris.portable.model.dto;
 
-import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 
 public class SystemDto extends BaseDto {

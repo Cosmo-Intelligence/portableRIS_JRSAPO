@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import ris.lib.core.Configuration;
 import ris.lib.core.util.CommonString;

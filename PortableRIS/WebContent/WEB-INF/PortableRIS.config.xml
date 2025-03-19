@@ -12,13 +12,13 @@
 	<!--
 	  説明：ポータブルに該当する、検査種別を設定して下さい。 ※カンマ区切りで複数設定可
 	-->
-	<KensaTypeId>PO,CH</KensaTypeId>
+	<KensaTypeId>IP,PO,F010</KensaTypeId>
 
 	<!-- 検査種別ID：参照モード -->
 	<!--
 	  説明：参照モードに該当する、検査種別を設定して下さい。 ※カンマ区切りで複数設定可
 	-->
-	<KensaTypeId_Read>CH,PO</KensaTypeId_Read>
+	<KensaTypeId_Read>IP,PO,F010</KensaTypeId_Read>
 
 	<!-- 職員区分：検査技師 -->
 	<!--
@@ -169,7 +169,7 @@
 	  説明：患者氏名カナをローマ字変換する際に、使用します。
 	        ※変更しないで下さい。
 	-->
-	<KanaRomaText>C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/PortableRIS/WEB-INF/KanaRomaList.txt</KanaRomaText>
+	<KanaRomaText>C:\pleiades\eclipse-2023\tomcat\10\webapps\PortableRIS\WEB-INF/KanaRomaList.txt</KanaRomaText>
 
 	<!-- MPPS使用フラグ -->
 	<!--
@@ -181,7 +181,7 @@
 	<!--
 	  説明：一覧画面でポータブル区分コンボボックスを表示する場合trueを設定してください。
 	 -->
-	<UsePortableKbn>true</UsePortableKbn>
+	<UsePortableKbn>false</UsePortableKbn>
 
 	<!-- 受付時MWM登録使用フラグ -->
 	<!--
@@ -207,7 +207,7 @@
 	     受付ボタン押下後、患者の撮影詳細画面に遷移する場合trueを設定してください。
 	     falseの場合は、受付ボタン押下後、患者の撮影詳細画面に遷移しません。
 	 -->
-	<TransitionFlg>true</TransitionFlg>
+	<TransitionFlg>false</TransitionFlg>
 
 	<!-- 検査進捗ボタンフラグ(色設定) -->
 	<!--
