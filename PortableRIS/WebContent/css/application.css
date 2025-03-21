@@ -54,12 +54,12 @@ button.colored {
   height: 34px;
 }
 
-.logo-image {
+/*.logo-image {
     padding-top: 3px;
     max-width: 162px;
-}
+}*/
 
-.modal-header > .logo-image {
+.modal-header > /*.logo-image*/ {
     padding-top: 0px;
 }
 

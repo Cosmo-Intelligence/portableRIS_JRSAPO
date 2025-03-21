@@ -16,7 +16,7 @@
 		user="rris"
 		password="rris1"
 		driverClassName="oracle.jdbc.driver.OracleDriver"
-		url="jdbc:oracle:thin:@192.168.100.148:1521:rris"
+		url="jdbc:oracle:thin:@192.168.100.170:1521:rris"
 		connectionCacheProperties="{MaxLimit=10,ConnectionWaitTimeout=10}"
 	/>
 
@@ -32,7 +32,7 @@
 		user="arwork"
 		password="arwork"
 		driverClassName="oracle.jdbc.driver.OracleDriver"
-		url="jdbc:oracle:thin:@192.168.100.128:1521:rris"
+		url="jdbc:oracle:thin:@192.168.100.170:1521:rris"
 		connectionCacheProperties="{MaxLimit=10,ConnectionWaitTimeout=10}"
 	/>
 
@@ -48,7 +48,7 @@
 		user="arwork"
 		password="arwork"
 		driverClassName="oracle.jdbc.driver.OracleDriver"
-		url="jdbc:oracle:thin:@192.168.100.128:1521:rris"
+		url="jdbc:oracle:thin:@192.168.100.170:1521:rris"
 		connectionCacheProperties="{MaxLimit=10,ConnectionWaitTimeout=10}"
 	/>
 
