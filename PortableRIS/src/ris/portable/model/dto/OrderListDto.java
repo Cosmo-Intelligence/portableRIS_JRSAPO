@@ -28,6 +28,7 @@ public class OrderListDto extends BaseDto {
 		private String irai_section;
 		private String irai_doctor_name;
 		private String renraku_memo;
+		private String renraku_memo_detail;
 		private boolean transition_flg;
 
 
@@ -126,7 +127,15 @@ public class OrderListDto extends BaseDto {
 		public void setRenraku_memo(String renraku_memo) {
 			this.renraku_memo = renraku_memo;
 		}
-
+		
+		public String getRenraku_memo_detail() {
+			return renraku_memo_detail;
+		}
+		
+		public void setRenraku_memo_detail(String renraku_memo_detail) {
+			this.renraku_memo_detail = renraku_memo_detail;
+		}
+		
 		// 2020.03.05 Nishihara@COSMO Start 町田市民病院PortableRIS改造対応
 		public boolean getTransition_flg() {
 			return transition_flg;

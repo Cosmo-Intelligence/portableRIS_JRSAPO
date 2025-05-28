@@ -777,7 +777,7 @@ $(document).ready(function(){
         }
       });
     };
-
+	
     //// 保留ダイアログ
     // 保留ダイアログViewModel
     var deferModalDlgVM = function(risSatueiInfo, mppsInfo){
@@ -1281,6 +1281,31 @@ $(document).ready(function(){
     $("#errorModal").modal();
   };
 
+  // モーダル情報オブジェクト
+  vm.memoModalDlg = {
+    message: ko.observable(""),
+    buttons: ko.observableArray([]),
+    clickButton: function(index) {
+      $("#memoModal").modal("hide");
+    }
+  };
+
+  // 連絡メモダイヤログ
+  vm.showMemo = function(data) {
+    var detail = data && data.renraku_memo_detail ? data.renraku_memo_detail : "";
+    // 改行
+    var formattedDetail = detail.replace(/\n/g, "<br>");
+    vm.showMemoDialog(formattedDetail, ["閉じる"]);
+  };
+
+  // ダイアログ表示メソッド
+  vm.showMemoDialog = function(msg, buttons) {
+    vm.memoModalDlg.message(msg); 
+    vm.memoModalDlg.buttons(buttons || ["閉じる"]);
+    // Bootstrapのモーダル表示
+    $("#memoModal").modal("show");
+  };
+  
   //// プログレスダイアログ
   var progressCall = 0;
   // プログレスダイアログViewModel

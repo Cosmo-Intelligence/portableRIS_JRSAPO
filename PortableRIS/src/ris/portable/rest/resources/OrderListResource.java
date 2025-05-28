@@ -3,6 +3,9 @@ package ris.portable.rest.resources;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.GET;
@@ -11,10 +14,6 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import ris.portable.common.Config;
 import ris.portable.common.Const;
 import ris.portable.common.SessionControler;
@@ -220,6 +219,7 @@ public class OrderListResource {
 			order.setIrai_section(dt.getRows().get(i).get("IRAI_SECTION").toString());
 			order.setIrai_doctor_name(dt.getRows().get(i).get("IRAI_DOCTOR_NAME").toString());
 			order.setRenraku_memo(dt.getRows().get(i).get("RENRAKU_MEMO").toString());
+			order.setRenraku_memo_detail(dt.getRows().get(i).get("RENRAKU_MEMO_DETAIL").toString());
 
 			// 2020.03.05 Nishihara@COSMO Start 町田市民病院PortableRIS改造対応
 			order.setTransition_flg(config.getTransitionFlg());

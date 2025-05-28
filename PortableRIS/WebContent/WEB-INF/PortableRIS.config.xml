@@ -207,7 +207,7 @@
 	     受付ボタン押下後、患者の撮影詳細画面に遷移する場合trueを設定してください。
 	     falseの場合は、受付ボタン押下後、患者の撮影詳細画面に遷移しません。
 	 -->
-	<TransitionFlg>false</TransitionFlg>
+	<TransitionFlg>true</TransitionFlg>
 
 	<!-- 検査進捗ボタンフラグ(色設定) -->
 	<!--

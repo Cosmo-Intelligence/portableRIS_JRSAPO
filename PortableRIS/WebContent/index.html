@@ -151,8 +151,12 @@
           <!-- 2023.09.15 Add Kasama@COSMO start 関東労災病院ポータブルRIS_iPad第6世代対応 styleにtransformの指定を追加 -->
           <td colspan="2" style="transform: translate(-5px)">
           <!-- 2023.09.15 Add Kasama@COSMO end   関東労災病院ポータブルRIS_iPad第6世代対応 styleにtransformの指定を追加 -->
-            <span data-bind="text: renraku_memo" style="color: #00b050; font-weight: bold"></span>
-          </td>
+          <!-- <span data-bind="text: renraku_memo" style="color: #00b050; font-weight: bold"></span>
+          </td> -->
+          <!-- 2025.05/26 Add Shirota@COSMO start JR札幌病院 連絡メモ詳細画面追加対応 cursorの追加、clickの追加。、連絡メモありのみ<span>表示 -->
+		  	<span data-bind="text: renraku_memo, click: $root.showMemo, visible: renraku_memo === '連絡メモあり'" style="color: #00b050; font-weight: bold; cursor: pointer;"></span>
+		  <!-- 2025.05/26 Add Shirota@COSMO start JR札幌病院 連絡メモ詳細画面追加対応 cursorの追加、clickの追加。、連絡メモありのみ<span>表示 -->
+		 </td>
         </tr>
       </table>
     </script>
@@ -912,6 +916,27 @@
     </div> <!-- /.modal-content -->
   </div> <!-- /.modal-dialog -->
 </div> <!-- /.modal -->
+<!-- /ko -->
+
+<!-- ko with: memoModalDlg -->
+<div class="modal" id="memoModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-show="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" style="padding-top: 15%">
+    <div class="modal-content">
+      <div class="modal-header" style="border-radius: 5px 5px 0px 0px; background-color: #2E86D2; padding-top: 5px;padding-bottom: 5px;">
+      </div>
+      <div class="modal-body">
+        <!-- 取得内容表示 -->
+        <p data-bind="html: message"></p>
+      </div>
+      <div class="modal-footer">
+        <!-- ボタン配列 -->
+        <!-- ko foreach: buttons -->
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-bind="text: $data, click: $parent.clickButton.bind($data, $index())"></button>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+</div>
 <!-- /ko -->
 
 <!-- ko with: errorModalDlg -->

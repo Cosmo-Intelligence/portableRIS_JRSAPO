@@ -1883,6 +1883,7 @@ public class DataBase extends DataBaseCore {
 		sql   += "   case";
 		sql   += "     when length(EXMAINTABLE.RENRAKU_MEMO) > 0 then '連絡メモあり'";
 		sql   += "   end as RENRAKU_MEMO,";
+		sql   += "   EXMAINTABLE.RENRAKU_MEMO AS RENRAKU_MEMO_DETAIL,";
 		sql   += "   RISSUMMARYVIEW.BYOUTOU_ID,";         // デバッグ用
 		sql   += "   RISSUMMARYVIEW.BYOUSITU_ID,";        // デバッグ用
 		sql   += "   RISSUMMARYVIEW.UKETUKE_TANTOU_ID,";  // デバッグ用
