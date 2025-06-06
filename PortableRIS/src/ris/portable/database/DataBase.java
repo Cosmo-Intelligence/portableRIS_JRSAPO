@@ -2362,4 +2362,39 @@ public class DataBase extends DataBaseCore {
 		}
 		return true;
 	}
+	
+	/**
+	 * WorkListInfoに受済オーダーと同一AcNoのレコードがあるか確認
+	 * @param ris_id :RIS_ID
+	 * @param conn   :接続情報
+	 * @return       :レコード有無
+	 * */
+	public static boolean isMWMOrder(String ris_id, String status, Connection conn) throws Exception {
+		String sql = "";
+		ArrayList<Object> arglist = new ArrayList<Object>();
+		
+		sql += "SELECT 1 ";
+		sql += "FROM RisSummaryView rsv ";
+		sql += "WHERE ris_id = ? ";
+		sql += "AND status = ? ";
+		sql += "AND EXISTS( ";
+		sql += "  select 1 ";
+		sql += "  from WorkListInfo wli ";
+		sql += "  where wli.accession_number = rsv.acno ";
+		sql += ")";
+		
+		arglist.add(ris_id);
+		arglist.add(status);
+		Object[] args = new Object[arglist.size()];
+		arglist.toArray(args);
+		
+		try {
+			// データあり
+			if(existRecord(sql, args, conn)) return true;
+		}catch(Exception e) {
+			throw e;
+		}
+		// データなし
+		return false;
+	}
 }

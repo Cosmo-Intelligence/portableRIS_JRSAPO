@@ -339,4 +339,35 @@ public class DataBaseCore {
 		return false;
 	}
 
+	public static boolean existRecord(String sql, Object[] args, 
+			Connection conn) throws Exception {
+		
+		OraclePreparedStatement stmt = null;
+		ResultSet rset = null;
+
+		logger.debug(sql);
+
+		try {
+
+			stmt = (OraclePreparedStatement) conn.prepareStatement(sql);
+
+			setParameters(stmt, args);
+
+			rset = stmt.executeQuery();
+			
+			if(rset.next()) return true;
+
+		} catch (Exception e) {
+			logger.error(e.toString(), e);
+			throw e;
+		} finally {
+			try {
+				rset.close();
+				stmt.close();
+			} catch (Exception ee) {
+				// NULL;
+			}
+		}
+		return false;
+	}
 }

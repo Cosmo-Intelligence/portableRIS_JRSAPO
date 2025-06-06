@@ -3,6 +3,10 @@ package ris.portable.rest.resources;
 import java.sql.Connection;
 import java.sql.Timestamp;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.cxf.common.util.StringUtils;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.GET;
@@ -12,11 +16,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.cxf.common.util.StringUtils;
-
 import ris.lib.core.Configuration;
 import ris.lib.core.bean.AccessInfoBean;
 import ris.lib.core.bean.OrderInfoBean;
@@ -117,6 +116,16 @@ public class OrderDetailResource {
 				dto.setMsg("データベースへ接続できませんでした。");
 				return false;
 			}
+			
+			// 一括MWMオーダー操作制御
+			if(DataBase.isMWMOrder(ris_id,config.getStatuscode_ukezumi(), risconn)) {
+				String errMsg = "対象オーダは検査開始用に操作済の為、詳細画面の表示は行えません。";
+				logger.debug(errMsg);
+				dto.setResult(Const.RESULT_NG);
+				dto.setErrlevel(Const.ERRLEVEL_WARN);
+				dto.setMsg(errMsg);
+				return false;
+			}
 
 			// add sta 201806_ポータブルRIS検査系種別対応
 			// アプリケーションクラス
@@ -182,6 +191,7 @@ public class OrderDetailResource {
 					}
 				}
 				// 2019.08.06 Add Cosmo End 排他対応
+				
 				// オーダ詳細情報
 				DataTable orderDt = null;
 				// オーダ詳細情報取得
